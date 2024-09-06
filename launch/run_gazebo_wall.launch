@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find gazebo_object_env)/world/nine_desk_wall.world"/> <!-- kinect -->
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/> 
+    <arg name="recording" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+  <!-- convert to grid map -->
+  <!-- <include file="$(find gazebo_gridmapping)/launch/mapping.launch"></include> -->
+   
+  <!-- tf tree from map to odom -->
+  <node name="map_odom_tf_publisher" pkg="gazebo_object_env" type="map_odom_tf_publisher"/>
+
+<!--  <arg name="urdf_file" default="$(find xacro)/xacro '$(find connect_gazebo)/urdf/robot_kinect.urdf.xacro'"/>-->
+<!--  <param name="robot_description" command="$(arg urdf_file)"/>-->
+<!--  <node name="kinect_v1" pkg="gazebo_ros" type="spawn_model"-->
+<!--        args="$(optenv ROBOT_INITIAL_POSE) -unpause -urdf -param robot_description -model mobile_base"/>-->
+
+
+</launch>
+

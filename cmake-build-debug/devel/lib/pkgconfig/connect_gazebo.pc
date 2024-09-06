@@ -1,0 +1,8 @@
+prefix=/home/zhjd/workspace/catkin_ws_yz_with_gazebo/catkin_ws/src/connect_gazebo/cmake-build-debug/devel
+
+Name: connect_gazebo
+Description: Description of connect_gazebo
+Version: 0.0.0
+Cflags: -I/home/zhjd/workspace/catkin_ws_yz_with_gazebo/catkin_ws/src/connect_gazebo/include
+Libs: -L${prefix}/lib -lconnect_gazebo
+Requires: roscpp std_msgs test_pkg gazebo_msgs

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/zhjd/workspace/catkin_ws_yz_with_gazebo/catkin_ws/src/connect_gazebo/cmake-build-debug/devel/setup.sh

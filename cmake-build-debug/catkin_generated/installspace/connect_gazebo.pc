@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: connect_gazebo
+Description: Description of connect_gazebo
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lconnect_gazebo
+Requires: roscpp std_msgs test_pkg gazebo_msgs

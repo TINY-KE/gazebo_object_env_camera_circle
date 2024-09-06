@@ -1,0 +1,9 @@
+<launch>
+
+   <node name="odom_publisher" pkg="gazebo_object_env" type="odom_publisher"/>
+   
+   <include file="$(find gazebo_object_env)/launch/move_base_config.launch"></include>
+
+   <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find gazebo_object_env)/param/my_rviz.rviz" required="true" /> -->
+
+</launch> 
