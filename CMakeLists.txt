@@ -176,6 +176,8 @@ target_link_libraries(odom_publisher ${catkin_LIBRARIES})
 add_executable(cmdvel_change_gazebo src_navgation/cmdvel_change_gazebo.cpp)
 target_link_libraries(cmdvel_change_gazebo ${catkin_LIBRARIES})
 
+add_executable(object_direction src/object_direction.cpp)
+target_link_libraries(object_direction ${catkin_LIBRARIES})
 
 add_executable(gazebo_world_parser src/gazebo_world_parser.cpp)
 target_link_libraries(gazebo_world_parser
